@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/landing.css')}}"/>
+    <title>Opioids Landing</title>
+    
+   
+</head>
+<body>
+
+<div class="landingtitle animated bounceInDown">
+<img src= "{{url_for('static', filename='images/Title7.jpg')}}" alt='MyPic' style="width:700px; height:400px;"/>
+</div>
+<div class="enter">
+<div class="enterbutton"  onclick="window.location.href='{{ url_for('spacer1') }}';">
+<img src= "{{url_for('static', filename='images/ENTER.jpg')}}" alt='MyPic' style="width:200px; height:65px; color:white;"/>
+</div>
+</div>
+<div class="shoutout">
+Created By <div class="team99">Team99:</div><div class="teamnames">
+Beau Wood, Brooke Johnson, Michael Tang and Scott Shalom</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/landing.js')}}"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+</html>

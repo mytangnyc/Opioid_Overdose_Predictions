@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}"/>
+    <title>Opioids</title>
+</head>
+<body>
+<h1></h1>
+<div class="headerarea row">
+	<div class="chevron inline">
+		<div class="leftchevbutton"  onclick="window.location.href='{{ url_for('ml') }}';">
+		<img src= "{{url_for('static', filename='images/leftchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+		</div>
+	</div>
+	<div class="header inline">
+	</div>
+	<div class="chevron inline">
+		<div class="rightchevbutton"  onclick="window.location.href='{{ url_for('landing') }}';">
+		<img src= "{{url_for('static', filename='images/rightchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+		</div>
+	</div>
+</div>
+<div class="container spacer">
+Research To Be Continued...
+</div>
+
+<script>"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+</html>

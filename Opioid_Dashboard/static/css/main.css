@@ -1,0 +1,80 @@
+.row{
+	text-align: center;
+
+}
+
+.sales1{
+	margin-left: 250px;
+	margin-right: 250px;
+	margin-top: 50px;
+
+}
+
+.sales2{
+	margin-left: 200px;
+
+	margin-top: 25px;
+}
+.sales3{
+	margin-left: 200px;
+	
+	margin-top: 25px;
+}
+
+.income{
+	margin-left: 275px;
+	margin-top: 15px;
+}
+.model{
+	margin-left: 200px;
+
+	margin-top: 25px;
+}
+
+.chevron{
+	
+
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+.crimerates{
+	margin-left: 150px;
+	margin-top: 25px;
+}
+
+.alcohol{
+	margin-left: 300px;
+	margin-top: 25px;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.parent {
+  padding: 1rem;
+}
+.child {
+  border: 1px solid indigo;
+  padding: 1rem;
+}
+
+.header{
+	width:80%;
+	font-size: 18pt;
+}
+
+.spacer{
+	font-size: 48px;
+	font-weight:bold;
+	text-align: center;
+	margin-top: 250px;
+}

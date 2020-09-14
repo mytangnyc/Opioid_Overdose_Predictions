@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Opioids</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}"/>
+    <style>
+        h1 {
+          color: blue;
+          font-family: verdana;
+          font-size: 300%;
+        }
+        .tableauPlaceholder  {
+          width: 50%;
+          height:200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                var optionValue = $(this).attr("value");
+                console.log(optionValue);
+                if(optionValue){
+                    $(".map").not("." + optionValue).hide();
+                    $("." + optionValue).show();
+                } else{
+                    $(".map").hide();
+                }
+            });
+        }).change();
+    });
+    </script>
+</head>
+<body>
+<h1></h1>
+    <div class="headerarea row">
+        <div class="chevron inline">
+            <div class="leftchevbutton"  onclick="window.location.href='{{ url_for('clusters') }}';">
+            <img src= "{{url_for('static', filename='images/leftchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+            </div>
+        </div>
+        <div class="header inline">We trained a machine learning model to predict the number of opioid related deaths per county.  We used
+            different county level datasets to try to best represent each county.  Here you can modify the amount of opioids distributed to see
+            how our model predicts this would affect the opioid deaths per capita.
+        </div>
+        <div class="chevron inline">
+            <div class="rightchevbutton"  onclick="window.location.href='{{ url_for('landing') }}';">
+            <img src= "{{url_for('static', filename='images/rightchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="container sales1">
+    <div align="center">
+        <select>
+            <option value="Truth">Actual Sales</option>
+            <option value="minus_20">Sales - 20%</option>
+            <option value="minus_50">Sales - 50%</option>
+            <option value="plus_20">Sales + 20%</option>
+            <option value="plus_50">Sales + 50%</option>
+        </select>
+    </div>
+    <div class="Truth map">
+        <div class='tableauPlaceholder' id='viz1573948241969' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapitaAvg2006-2012&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Example_Opiod_Sales&#47;DeathsPerCapitaAvg2006-2012' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapitaAvg2006-2012&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1573948241969');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="minus_20 map">
+        <div class='tableauPlaceholder' id='viz1573948280817' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita-20Sales&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Example_Opiod_Sales&#47;DeathsPerCapita-20Sales' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita-20Sales&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1573948280817');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="minus_50 map">
+        <div class='tableauPlaceholder' id='viz1573948310694' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita-50Sales&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Example_Opiod_Sales&#47;DeathsPerCapita-50Sales' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita-50Sales&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1573948310694');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="plus_20 map">
+        <div class='tableauPlaceholder' id='viz1573948343117' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita20Sales&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Example_Opiod_Sales&#47;DeathsPerCapita20Sales' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita20Sales&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1573948343117');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="plus_50 map">
+        <div class='tableauPlaceholder' id='viz1573948384116' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita50Sales&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Example_Opiod_Sales&#47;DeathsPerCapita50Sales' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Example_Opiod_Sales&#47;DeathsPerCapita50Sales&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1573948384116');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+h1 {
+          color: blue;
+          font-family: verdana;
+          font-size: 300%;
+     }
+     
+.tableauPlaceholder  {
+          width: 50%;
+          height:200px;
+ 	}
+ 	
+ .landingtitle{
+ 	text-align: center;
+ 	margin-top: 50px;
+ }
+ 
+ .enter{
+
+ 	text-align: center;
+  	margin-top: 50px;
+ 	margin-right: 70px;
+ 	
+
+ }
+ 
+ .enterbutton{
+ background: white;
+ border:none;
+ cursor: pointer;
+ }
+ 
+ .shoutout{
+ 	margin-top: 40px;
+ 	float: right;
+ 	font-size: 10pt;
+ 	
+ 	
+ }
+ 
+ .team99{
+ 	display: inline;
+ 	color: red;
+ 	margin-right: 15px;
+ 	
+ }

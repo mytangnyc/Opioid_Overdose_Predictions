@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}"/>
+    <title>Opioids</title>
+</head>
+<body>
+<h1></h1>
+<div class="headerarea row">
+	<div class="chevron inline">
+		<div class="leftchevbutton"  onclick="window.location.href='{{ url_for('spacer1') }}';">
+		<img src= "{{url_for('static', filename='images/leftchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+		</div>
+	</div>
+	<div class="header inline">The legal sale of opioids in the United States increased by <strong>51%</strong> 
+	in the six year period from 2006 to 2012.  There were approximately 12.6 billion pills sold in 2012 alone,
+	or on average of over 45 pills per person.
+	</div>
+	<div class="chevron inline">
+		<div class="rightchevbutton"  onclick="window.location.href='{{ url_for('sales2') }}';">
+		<img src= "{{url_for('static', filename='images/rightchevron.jpg')}}" alt='MyPic' style="width:50px; height:50px;"/>
+		</div>
+	</div>
+</div>
+<div class="container sales1">
+<div class='tableauPlaceholder' id='viz1573953853456' style='position: relative'><noscript><a href='#'><img alt=' '
+ src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CM&#47;CM8RF698J&#47;1_rss.png' style='border: none' />
+ </a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' 
+ value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' 
+ value='shared&#47;CM8RF698J' /> <param name='toolbar' value='yes' /><param name='static_image' 
+ value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CM&#47;CM8RF698J&#47;1.png' /> 
+ <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+ <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' 
+ value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'> 
+ var divElement = document.getElementById('viz1573953853456');                   
+ var vizElement = divElement.getElementsByTagName('object')[0];                    
+ vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                   
+var scriptElement = document.createElement('script');  
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+</script>
+</div>
+
+<script>"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+</html>
